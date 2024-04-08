@@ -1,0 +1,5 @@
+Dependencies
+
+nodemon
+mysql2
+express
