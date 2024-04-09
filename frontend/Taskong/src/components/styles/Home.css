@@ -1,0 +1,66 @@
+.home{
+    margin-left: 200px;
+    
+}
+
+.home .days{
+    background-color: #4d4a4a;
+    padding: 0 5% 1% 5%;
+}
+
+/* DIVISOR DAYS*/
+.home .days ul li a hr{
+    border: none;
+    border-radius: 75px;
+    background: #ffffff6b;
+    height: 2px;
+    transition: .2s;
+}
+
+.home .days ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.home .days ul li a{
+    color: #ffffff6b;
+    font-size: 1.3rem;
+    transition: .2s;
+}
+
+body.theme-light .home .days ul li:hover a,
+.home .days ul li:hover a{
+    color: #1f83bd; 
+}
+
+.home .days ul li:hover a hr{
+    background: #fff;  
+}
+
+.home .divisor{
+    border: none;
+    border-radius: 75px;
+    margin-top: 10px;
+    background: #00000015;
+    height: 2px;
+}
+
+
+/* --------THEMES----------- */
+body.theme-light .home .days{
+background-color: #e6e6e6;
+}
+
+body.theme-light .home .days ul li a hr{
+    background-color: #3a3b3b;
+}
+
+body.theme-light .home .days ul li a{
+    color: #3a3b3b;;
+}
+
+body.theme-light .home .days ul li:hover a{
+    color: #1f83bd; 
+}

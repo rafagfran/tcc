@@ -1,0 +1,186 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000;
+    height: 100vh;
+    width: 200px;
+    padding-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sidebar .container{
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+/* NAV STYLE */
+.sidebar .container .nav{
+    width: 100%; 
+    padding-left: 15%;
+}
+.sidebar .container .nav ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar .container .nav ul li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.sidebar .container .nav ul li img{
+    width: 15px;
+}
+
+.sidebar .container .nav ul li a{
+    flex: 1;
+    max-width: 80%;
+    padding-left: 10px;
+    border-radius: 5px;
+    transition: .1s;
+    font-size: 1.1rem;
+}
+
+
+.sidebar .container .nav ul li a:hover{
+    background-color: rgba(255, 255, 255, 0.096);
+}
+
+/* DIVISOR */
+.sidebar .container hr{
+    width: 80%;
+    margin-top: 50px;
+    border: none;
+    height: 2px;
+    background-color: #ffffff2c;
+    border: 75px;
+}
+
+/* THEME SELECTOR */
+
+.sidebar .container  .theme-selector{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.sidebar .container .theme-selector .btn{
+    background-color: aliceblue;
+    border-radius: 20px;
+    border: 1px solid white;
+    background-color: transparent;
+    padding: 2px;
+    width: 55px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.sidebar .container  .theme-selector .btn button{
+    height: 100%;
+    width: 50%;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: transform .3s;
+}
+
+.sidebar .container  .theme-selector .btn button:hover{
+    background-color: rgb(151, 151, 156);
+}
+
+
+.sidebar .container .theme-selector.light  .btn button{
+    transform: translateX(100%);
+}
+
+
+/* USER STYLES */
+.sidebar .container .user-container {
+    border-top: 1px solid white;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto; 
+    gap: 15px;
+    width: 100%;
+}
+
+.sidebar .container .user-container .user .username{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+}
+
+.sidebar .container .user-container .user .username img{
+    width: 13%;
+    height: auto;
+}
+
+.sidebar .container .user-container img {
+    height: 50px;
+    width: 50px;
+}
+
+.sidebar .container .user-container .user-status{
+    color: rgb(108, 109, 110);
+}
+
+
+/* --------THEMES----------- */
+body.theme-light .sidebar{
+    background-color: #dddada;
+}
+
+body.theme-light .sidebar h1,
+body.theme-light .sidebar p,
+body.theme-light .sidebar a{
+    color: #000;
+}
+
+body.theme-light .sidebar .container  .theme-selector .btn{
+    border: 1px solid #000;
+    background-color: #fff;
+}
+body.theme-light .sidebar .container  .theme-selector .btn button{
+    background-color: #000;
+}
+
+body.theme-light .sidebar  .container .user-container{
+    border-top: 1px solid #000;
+}
+
+body .sidebar .container hr{
+    width: 80%;
+    margin-top: 50px;
+    border: none;
+    height: 2px;
+    background-color: #ffffff2c;
+    border: 75px;
+}
+
+body.theme-light .sidebar  .container hr{
+    background-color: #0000002c;
+}
+
+body.theme-light .sidebar .container .nav ul li a:hover{
+    background-color: #f0f8ff;
+}
