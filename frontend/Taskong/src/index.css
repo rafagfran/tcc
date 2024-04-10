@@ -9,12 +9,13 @@
     font-family: 'Poppins', 'Times New Roman', Times, serif,sans-serif;
     color: #fff;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 body{
-    width: 100vw;
     font-size: 16px;
     background: #929191;
+    transition: .2s;
 }
 
 body.theme-light {

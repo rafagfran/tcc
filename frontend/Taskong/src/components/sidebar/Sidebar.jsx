@@ -12,6 +12,7 @@ import tasksIconDark from '../../assets/dark-theme/tasks-dark-icon.png'
 import financeIconDark from '../../assets/dark-theme/finance-pig-dark-icon.png'
 import pomodoroIconDark from '../../assets/dark-theme/pomodoro-dark-icon.png'
 import dropdownIconDark from '../../assets/dark-theme/dropdown-dark-icon.png'
+import menuIconDark from '../../assets/dark-theme//menu-dark-icon.png'
 
 const Sidebar = () => {
 
@@ -31,6 +32,7 @@ const Sidebar = () => {
     var finance = document.getElementById('finance-icon')
     var pomodoro = document.getElementById('pomodoro-icon')
     var dropdown = document.getElementById('dropdown-icon')
+    var menu = document.getElementById('menu-icon')
     var body = document.body
 
     divTheme.classList.toggle('dark')
@@ -45,12 +47,14 @@ const Sidebar = () => {
         finance.src = financeIconDark;
         pomodoro.src = pomodoroIconDark;
         dropdown.src = dropdownIconDark
+        menu.src = menuIconDark
     }else{
         home.src = homeIcon;
         tasks.src = tasksIcon;
         finance.src = financeIcon;
         pomodoro.src = pomodoroIcon;
         dropdown.src = dropdownIcon;
+        menu.src = menuIcon
     }
       
   }
@@ -61,7 +65,7 @@ const Sidebar = () => {
         <div className="logo">
             <h1>LOGO</h1>
         </div>
-        <img onClick={() => (showSideBar())} src={menuIcon} alt="" />
+        <img id='menu-icon' onClick={() => (showSideBar())} src={menuIcon} alt="" />
       </div>
   
       <div className="container">

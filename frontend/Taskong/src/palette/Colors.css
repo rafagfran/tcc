@@ -1,0 +1,51 @@
+
+:root {
+    --default-black:#000;
+    --default-white: #fff;
+
+    /* --------------SIDEBAR---------------- */
+        /* background */
+        --dark-sidebar-background: #000;
+        --light-sidebar-background: #dddada;
+
+        /* divisor */
+        --dark-sidebar-divisor: #b3b3b3;
+        --light-sidebar-divisor: #0000002c;
+
+        /* fonts */
+        --dark-sidebar-font: #fff;
+        --dark-sidebar-opaque-font:#b3b3b3;
+
+        --light-sidebar-font: #000;
+        --light-sidebar-opaque-font:#b3b3b3;
+        
+        /* hover */
+        --dark-sidebar-hover:#b3b3b3;
+        --light-sidebar-hover:#f0f8ff;
+
+
+        /* button theme selector */
+        --dark-sidebar-background-button-circle:#ffffff;
+        --dark-sidebar-background-button:#ffffff;
+        --dark-sidebar-border-button:#ffffff;
+        --dark-sidebar-hover-button:#b3b3b3;
+
+        --light-sidebar-background-button-circle:#000000;
+        --light-sidebar-background-button:#fafafa;
+        --light-sidebar-border-button:#000000;
+        --light-sidebar-hover-button:#686767;
+
+        /* user */
+        --dark-sidebar-border-user: #fff;
+        --light-sidebar-border-user: #000;
+        
+
+    /* --------------BODY----------------- */
+        --dark-body-background: #929191;
+        --dark-body-opaque-font:#b3b3b3;
+        --dark-body-divisor: #b3b3b3;
+        
+        --light-body-background: #929191;
+        --light-body-opaque-font:#b3b3b3;
+        --light-body-divisor: #b3b3b3
+}
