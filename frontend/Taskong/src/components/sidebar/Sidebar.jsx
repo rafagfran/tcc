@@ -5,6 +5,7 @@ import tasksIcon from '../../assets/tasks-icon.png'
 import financeIcon from '../../assets/finance-pig-icon.png'
 import pomodoroIcon from '../../assets/pomodoro-icon.png'
 import dropdownIcon from '../../assets/dropdown-icon.png'
+import menuIcon from '../../assets/menu-icon.png'
 
 import homeIconDark from '../../assets/dark-theme/home-dark-icon.png'
 import tasksIconDark from '../../assets/dark-theme/tasks-dark-icon.png'
@@ -15,6 +16,13 @@ import dropdownIconDark from '../../assets/dark-theme/dropdown-dark-icon.png'
 const Sidebar = () => {
 
   const defaultTheme = 'dark'
+
+  function showSideBar(){
+    var sidebar = document.querySelector('.sidebar')
+
+    sidebar.classList.toggle('open')
+    sidebar.classList.toggle('closed')
+  }
 
   function themeSelector() {
     var divTheme = document.querySelector('.theme-selector')
@@ -49,9 +57,13 @@ const Sidebar = () => {
 
   return (
     <div className= {`sidebar theme-${defaultTheme}`}>
-      <div className="logo">
-          <h1>LOGO</h1>
+      <div className="logo-container">
+        <div className="logo">
+            <h1>LOGO</h1>
+        </div>
+        <img onClick={() => (showSideBar())} src={menuIcon} alt="" />
       </div>
+  
       <div className="container">
         <div className="nav">
           <ul>
