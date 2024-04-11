@@ -1,4 +1,8 @@
-.task{
+/* Import */
+@import '../../../palette/Colors.css';
+
+/* Task Styles */
+.task {
     padding: 10px 20px;
     max-height: 100vh;
     flex: 1;
@@ -7,22 +11,24 @@
     flex-direction: column;
     align-items: center;
 }
-.task .days{
+
+.task .days {
     max-width: 1500px;
 }
 
-.task .days ul{
+.task .days ul {
     display: flex;
     align-items: center;
     gap: 4vw;
     padding: 0 10px;
     padding-bottom: 10px;
 }
+
 .task .days ul li {
     transition: transform .2s ;
 }
 
-.task .days ul li button{
+.task .days ul li button {
     background: none;
     border: none;
     font-size: 1.5rem;
@@ -35,123 +41,98 @@
     transition: .1s;
 }
 
-.task .days ul li button h4{
-    color: #b3b3b3;
-}
-
-.task .days ul li button hr{
-    border: none;
-    border-radius: 75px;
-    background-color: #b3b3b3;
-    width: 100%;
-    height: 2px;
-}
-
-
-
-/* HOVER */
-
-.task .days ul li button:hover h4{
-    color: aliceblue;
-}
-
-.task .days ul li button:hover hr{
-    background-color: aliceblue ;
-}
-
-.task .days ul li:hover{
-    transform: scale(110%);
-}
-
-
-/* ---------TASKS CONTAINER----- */
-.task .task-container{
+/* Task Container Styles */
+.task .task-container {
     padding: 20px 30px;
     width: 100%;
     flex: 1;
-    background-color: #05051d;
+    background-color: none;
     border-radius: 10px;
 }
 
-.task .task-container .new-task{
+.task .task-container .new-task {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
+    background-color: none;
+    padding: 10px;
+    border-radius: 7px;
 }
 
-.task .task-container .new-task .newTask-btn{
-    background-color: #d8690f;
+.task .task-container .new-task .newTask-btn {
+    display: flex;
+    align-items: center;
+    background: none;
     text-align: center;
-    height: 25px;
-    padding: 2px 7px;
+    height: 35px;
     border: none;
-    border-radius: 15px;
+    border-radius: 5px;
+    font-size: 1rem;
     cursor: pointer;
+    gap: 5px;
 }
 
-.task .task-container .new-task input{
-    border-radius: 10px;
-    border: none;
-    height: 25px;
+.task .task-container .new-task .newTask-btn img {
+    height: 80%;
+}
+
+.task .task-container .new-task .newTask-btn:hover {
+    transform: scale(103%);
+}
+
+.task .task-container .new-task input {
+    border-radius: 5px;
+    border: 1px solid white;
+    height: 30px;
+    width: 500px;
     padding: 0 5px;
+    background: none;
 }
 
-
-.task .task-container hr{
-    border: none;
-    height: 2px;
-    background-color: rgba(238, 234, 234, 0.342);
+/* Task Table Styles */
+.task .task-container .table {
     margin-top: 10px;
-}
-
-
-.task .task-container .table{
-    margin-top: 30px;
     display: grid; 
-    grid-template-columns: 15px 50px 1fr 200px;
+    grid-template-columns: 50px 1fr 200px;
     grid-template-rows: 40px;
     grid-auto-rows: 40px;
+    padding: 10px;
 }
 
-.task .task-container .table input{
+.task .task-container .table input {
     background: none;
     color: white;
     border: none;
-    border-top: 2px solid  rgba(247, 246, 246, 0.288);
+    border-top: 2px solid rgba(247, 246, 246, 0.288);
     box-shadow: none;
     font-size: 1.1rem;
 }
 
-.task .task-container .table input::placeholder{
+.task .task-container .table input::placeholder {
     color: #f7f7f742;
 }
 
-.task .task-container .table input:focus{
+.task .task-container .table input:focus {
     outline: none;
 }
 
-.task .task-container .table  #description-header{
-    grid-column:3;
-}
-.task .task-container .table  #status-header{
-    grid-column:4;
-}
-
-.task .task-container .table #task-check{
-    grid-column: 1;
-    cursor: pointer;
-}
-.task .task-container .table #task-id{
+.task .task-container .table #description-header {
     grid-column: 2;
-    margin-left: 10px;
-    
 }
 
-.task .task-container .table #task-idescription{
+.task .task-container .table #status-header {
     grid-column: 3;
 }
 
-.task .task-container .table #status-id{
-    grid-column: 4;
+.task .task-container .table #task-id {
+    grid-column: 1;
+    margin-left: 10px; 
 }
 
+.task .task-container .table #task-idescription {
+    grid-column: 2;
+}
+
+.task .task-container .table #status-id {
+    grid-column: 3;
+}

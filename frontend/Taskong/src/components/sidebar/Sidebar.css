@@ -1,129 +1,98 @@
+/* Import */
 @import '../../palette/Colors.css';
 
+/* Sidebar Styles */
 .sidebar {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: var(--dark-sidebar-background);
-    height: 100vh;
     width: 200px;
+    height: 100vh;
     padding-top: 20px;
     overflow: hidden;
-    transition: .2s;
+    transition: width 0.2s ease-in-out;
 }
 
-.sidebar.closed{
+.sidebar.closed {
     width: 50px;
 }
 
-.sidebar.closed .logo-container .logo{
-    visibility: hidden;
-}
-
-.sidebar.closed .logo-container img{
-    position: absolute;
-}
-
-.sidebar.closed .container .nav{
-   padding: 0;
-}
-
-.sidebar.closed .container .nav ul li{
-    text-align: center;
-    justify-content: center;
-}
-
-.sidebar.closed .container .nav ul li img{
-    width: 30px;
-    position: absolute;
-}
-
-.sidebar.closed .container .nav a{
-    visibility: hidden;
-}
-
-.sidebar.closed .container .theme-selector{
-    visibility: hidden;
-}
-
-.sidebar.closed .container .user-container{
-    visibility: hidden;
-}
-
-.sidebar .logo-container{
+/* Logo Container Styles */
+.logo-container {
     display: flex;
-    width: 100%;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
 }
 
-.sidebar .logo-container img{
+.logo-container img {
     height: 20px;
     width: 20px;
     cursor: pointer;
 }
 
-.sidebar .container{
+/* Container Styles */
+.container {
     width: 100%;
     margin-top: 50px;
     padding-bottom: 10px;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    height: 100%;
+    justify-content: space-between;
+    height: calc(100% - 50px);
     overflow-x: hidden;
 }
 
-/* NAV STYLE */
-.sidebar .container .nav{
-    width: 100%; 
+/* Navigation Styles */
+.nav {
+    width: 100%;
     padding-left: 15%;
 }
-.sidebar .container .nav ul{
+
+.nav ul {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.sidebar .container .nav ul li {
+.nav ul li {
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
-.sidebar .container .nav ul li img{
+.nav ul li img {
     width: 20px;
-    transform: .1s;
+    transition: transform 0.1s ease-in-out;
 }
 
-.sidebar .container .nav ul li a{
+.nav ul li a {
     flex: 1;
     max-width: 80%;
     padding-left: 10px;
     border-radius: 5px;
     font-size: 1.1rem;
+    color: var(--dark-sidebar-font);
 }
 
-
-.sidebar .container .nav ul li a:hover{
+.nav ul li a:hover {
     background-color: var(--dark-sidebar-hover);
 }
 
-/* DIVISOR */
-.sidebar .container hr{
+/* Divisor Styles */
+.container hr {
     width: 80%;
     margin-top: 50px;
     border: none;
     height: 2px;
     background-color: var(--dark-sidebar-divisor);
-    border: 75px;
 }
 
-/* THEME SELECTOR */
-
-.sidebar .container  .theme-selector{
+/* Theme Selector Styles */
+.theme-selector {
     margin-top: 50px;
     margin-bottom: 50px;
     display: flex;
@@ -133,7 +102,11 @@
     width: 200px;
 }
 
-.sidebar .container .theme-selector .btn{
+.theme-selector p {
+    color: var(--dark-sidebar-font);
+}
+
+.theme-selector .btn {
     border-radius: 20px;
     border: 1px solid var(--dark-sidebar-border-button);
     background: none;
@@ -145,91 +118,87 @@
     justify-content: flex-start;
 }
 
-.sidebar .container  .theme-selector .btn button{
+.theme-selector .btn button {
     height: 100%;
     width: 50%;
     border-radius: 50%;
     border: none;
     cursor: pointer;
-    transition: transform .3s;
+    transition: transform 0.3s ease-in-out;
 }
 
-.sidebar .container  .theme-selector .btn button:hover{
+.theme-selector .btn button:hover {
     background-color: var(--dark-sidebar-hover-button);
 }
 
-
-.sidebar .container .theme-selector.light  .btn button{
+.theme-selector.light .btn button {
     transform: translateX(100%);
 }
 
-
-/* USER STYLES */
-.sidebar .container .user-container {
-    border-top: 1px solid var(--dark-sidebar-user-border);
+/* User Styles */
+.user-container {
     padding-top: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: auto; 
+    margin-top: auto;
     gap: 15px;
     width: 100%;
 }
 
-.sidebar .container .user-container .user .username{
+.user-container .user .username {
     display: flex;
     align-items: center;
     gap: 7px;
     cursor: pointer;
 }
 
-.sidebar .container .user-container .user .username img{
+.user-container .user .username img {
     width: 13%;
     height: auto;
 }
 
-.sidebar .container .user-container img {
+.user-container img {
     height: 50px;
     width: 50px;
 }
 
-.sidebar .container .user-container .user-status{
-    color: rgb(108, 109, 110);
+.user-container .user-status {
+    color: var(--dark-sidebar-opaque-font);
 }
 
-
-/* --dark---dark---dark---dark-THEMES--dark---dark---dark---dark---dark-- */
-body.theme-light .sidebar{
+/* Light Theme Styles */
+body.theme-light .sidebar {
     background-color: var(--light-sidebar-background);
 }
 
 body.theme-light .sidebar h1,
 body.theme-light .sidebar p,
-body.theme-light .sidebar a{
+body.theme-light .sidebar .container .nav ul li a {
     color: var(--light-sidebar-font);
 }
 
-body.theme-light .sidebar .container  .theme-selector .btn{
+body.theme-light .sidebar .theme-selector .btn {
     border: 1px solid var(--light-sidebar-border-button);
     background-color: var(--light-sidebar-background-button);
 }
-body.theme-light .sidebar .container  .theme-selector .btn button{
+
+body.theme-light .sidebar .theme-selector .btn button {
     background-color: var(--light-sidebar-background-button-circle);
 }
 
-body.theme-light .sidebar .container  .theme-selector .btn button:hover{
+body.theme-light .sidebar .theme-selector .btn button:hover {
     background-color: var(--light-sidebar-hover-button);
 }
 
-body.theme-light .sidebar  .container .user-container{
+body.theme-light .sidebar .user-container {
     border-top: 1px solid var(--light-sidebar-border-user);
 }
 
-
-body.theme-light .sidebar  .container hr{
+body.theme-light .sidebar hr {
     background-color: var(--light-sidebar-divisor);
 }
 
-body.theme-light .sidebar .container .nav ul li a:hover{
+body.theme-light .sidebar .nav ul li a:hover {
     background-color: var(--light-sidebar-hover);
 }
