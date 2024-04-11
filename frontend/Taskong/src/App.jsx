@@ -1,6 +1,6 @@
 import './App.css'
-import Sidebar from './components/sidebar/Sidebar.jsx'
-import Tasks from './components/pages/tasks/Task.jsx'
+import Sidebar from './layout/sidebar/Sidebar.jsx'
+import Tasks from './pages/Task.jsx'
 
 function App() {
 

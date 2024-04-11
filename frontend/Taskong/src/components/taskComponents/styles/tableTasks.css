@@ -1,0 +1,48 @@
+.table {
+    margin-top: 10px;
+    display: grid; 
+    grid-template-columns: 50px 1fr 200px;
+    grid-template-rows: 40px;
+    grid-auto-rows: 40px;
+    padding: 10px;
+    flex: 1;
+    width: 100%;
+}
+
+.table input {
+    background: none;
+    color: white;
+    border: none;
+    border-top: 2px solid rgba(247, 246, 246, 0.288);
+    box-shadow: none;
+    font-size: 1.1rem;
+}
+
+.table input::placeholder {
+    color: #f7f7f742;
+}
+
+.table input:focus {
+    outline: none;
+}
+
+.table #description-header {
+    grid-column: 2;
+}
+
+.table #status-header {
+    grid-column: 3;
+}
+
+.table #task-id {
+    grid-column: 1;
+    margin-left: 10px; 
+}
+
+.table #task-idescription {
+    grid-column: 2;
+}
+
+.table #status-id {
+    grid-column: 3;
+}

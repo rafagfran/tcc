@@ -1,0 +1,39 @@
+.new-task {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: none;
+    padding: 10px;
+    border-radius: 7px;
+    width: 100%;
+}
+
+.new-task .newTask-btn {
+    display: flex;
+    align-items: center;
+    background: none;
+    text-align: center;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.new-task .newTask-btn img {
+    height: 80%;
+}
+
+.new-task .newTask-btn:hover {
+    transform: scale(103%);
+}
+
+.new-task input {
+    border-radius: 5px;
+    border: 1px solid white;
+    height: 30px;
+    width: 500px;
+    padding: 0 5px;
+    background: none;
+}
