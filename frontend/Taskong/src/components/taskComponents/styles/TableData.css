@@ -1,8 +1,11 @@
+@import '../../../palette/Colors.css';
+
+
 .data td{
     text-align: left;
     vertical-align:middle;
-    font-weight: 300;
-    color: #fff;
+    font-weight: 400;
+    color: var(--dark-content-font);
     padding: 3px 0;
    margin-bottom: 10px;
 }
@@ -16,21 +19,38 @@
 .data #id{
     text-align: center;
     flex: 1;
-    background: #3a3096;
+    background: var(--dark-id-background);
     border-radius: 10px;
 }
 
 .data #description{
     flex: 20;
     padding-left: 10px;
-    border-bottom: solid 1px rgba(255,255,255,0.1); 
+    border-bottom: solid 1px var(--dark-content-border); 
 }
 
 .data #status{
-    background: #642a2a;
+    background: var(--dark-status-background);
     border-radius: 15px;
     text-align: center;
     flex: 3;
-    
+}
 
+/* ----------LIGHT THEME------------ */
+
+body.theme-light .data td{
+    color: var(--light-content-font);
+}
+
+body.theme-light .data #id{
+    background: var(--light-id-background);
+}
+
+body.theme-light .data #description{
+    border-bottom: solid 1px var(--light-content-border); 
+}
+
+body.theme-light .data #status{
+    background: var(--light-status-background)
+    ;
 }

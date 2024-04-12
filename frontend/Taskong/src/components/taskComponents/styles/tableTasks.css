@@ -1,3 +1,4 @@
+@import '../../../palette/Colors.css';
 
 .table-tasks{
     display: flex;
@@ -38,21 +39,13 @@
 }
 
 .new-task input {
-    border: 1px solid white;
+    border: 1px solid var(--dark-newtask-input-border);
+    border-radius: 5px;
     height: 30px;
     width: 500px;
     padding: 0 5px;
     background: none;
 }
-
-body.theme-light .new-task input{
-    border: 1px solid black;
-}
-
-body.theme-light .newTask-btn{
-    color: black;
-}
-
 
 /* ======================CUSTOM TABALE==================== */
 .table table{
@@ -64,12 +57,12 @@ body.theme-light .newTask-btn{
   text-align: left;
   font-size: 1.2rem;
   font-weight: 500;
-  color: #fff;
+  color: var(--dark-header-font);
   text-transform: uppercase;
 }
 
 .table{
-    margin-top: 10px;
+    margin-top: 20px;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -78,10 +71,9 @@ body.theme-light .newTask-btn{
 .table .table-header{
     padding-right: 15px;
     padding: 5px 20px;
-    border: 1px solid #342d9b8e;
-    background: #03002e;
+    border: 1px solid var(--dark-header-border);
+    background: var(--dark-header-background);
     margin-bottom: 10px;
-    margin-top: 20px;
     border-radius: 10px;
 }
 
@@ -104,13 +96,9 @@ body.theme-light .newTask-btn{
     text-align: center;
     margin-right: 10px;
 }
+
 .table .table-data{
     overflow-y: auto;
-    max-height: 100%;
-    text-align: left;
-    vertical-align:middle;
-    font-weight: 300;
-    color: #fff;
     padding: 0 20px;
     flex: 1;
 }
@@ -125,8 +113,7 @@ body.theme-light .newTask-btn{
 }
 
 ::-webkit-scrollbar-thumb{
-    background: linear-gradient(#2c2869,#242069,#201d5e, #211d5c,#201d5e,#242069,#2c2869);
-    /* background: #343b53; */
+    background: var(--dark-scrolbar-thumb);
     border-radius: 10px;
 }
 
@@ -147,6 +134,32 @@ body.theme-light .newTask-btn{
 
 }
 
+/* LIGHT THEME */
 
 
 
+body.theme-light .new-task input{
+    border: 1px solid var(--light-newtask-input-border);
+}
+
+body.theme-light .newTask-btn{
+    color: var(--light-newtask-input-border);
+}
+
+body.theme-light .table th{
+    color: var(--light-header-font);
+}
+
+body.theme-light .table .table-header{
+    border: 1px solid var(--light-header-border);
+    background: var(--light-header-background);
+}
+
+body.theme-light .table .table-data{
+    color: var(--light-content-font);
+}
+
+body.theme-light ::-webkit-scrollbar-thumb{
+    background: var(--light-scrolbar-thumb);
+    border-radius: 10px;
+}

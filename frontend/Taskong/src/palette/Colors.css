@@ -42,5 +42,46 @@
         
         --light-body-background: #929191;
         --light-body-opaque-font:#b3b3b3;
-        --light-body-divisor: #b3b3b3
+        --light-body-divisor: #b3b3b3;
+    /* --------------TABLE----------------- */
+
+        /* scrollbar */
+        --dark-scrolbar-thumb:#332f74;
+        --light-scrolbar-thumb:rgb(182, 176, 176);
+
+        /* new task */
+        --dark-newtask-input-border:white;
+        --light-newtask-input-border:black;
+
+        --dark-newtask-font:white;
+        --light-newtask-font:black;
+
+        /* header */
+        --dark-header-font:white;
+        --light-header-font:black;
+
+        --dark-header-background:#03002e;
+        --light-header-background:#dddada;
+
+        --dark-header-border:#342d9b8e;
+        --light-header-border:#03002e;
+
+        --dark-content-font:white;
+        --light-content-font:black;
+
+        --dark-content-font:white;
+        --light-content-font:black;
+
+        --dark-content-border:#ffffff1a;
+        --light-content-border:#0000001c;
+
+        --dark-id-background:#3a3096;
+        --light-id-background:#9e96df;
+
+        --dark-status-background:#852727;
+        --light-status-background:#c44444;
+        
+        
+
 }
+
