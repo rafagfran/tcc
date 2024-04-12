@@ -230,7 +230,7 @@ body.theme-light .sidebar{
 
 body.theme-light .sidebar h1,
 body.theme-light .sidebar p,
-body.theme-light .sidebar .container .nav ul li a{
+body.theme-light .sidebar .container .nav ul li a span{
     color: var(--light-sidebar-font);
 }
 
