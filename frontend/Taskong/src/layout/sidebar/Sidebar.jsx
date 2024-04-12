@@ -71,10 +71,10 @@ const Sidebar = () => {
       <div className="container">
         <div className="nav">
           <ul>
-            <li><img id="home-icon" src={homeIcon}/><a href="#">Home</a></li>
-            <li ><img id="tasks-icon" src={tasksIcon}/><a href="#">Tasks</a></li>
-            <li ><img id="finance-icon" src={financeIcon}/><a href="#">Finance</a></li>
-            <li><img id="pomodoro-icon" src={pomodoroIcon}/><a href="#">Pomodoro</a></li>
+            <li><a href="#"><img id="home-icon" src={homeIcon}/><span>Home</span></a></li>
+            <li ><a href="#"><img id="tasks-icon" src={tasksIcon}/><span>Tasks</span></a></li>
+            <li ><a href="#"><img id="finance-icon" src={financeIcon}/><span>Finance</span></a></li>
+            <li><a href="#"><img id="pomodoro-icon" src={pomodoroIcon}/><span>Pomodoro</span></a></li>
           </ul>
         </div>
 
