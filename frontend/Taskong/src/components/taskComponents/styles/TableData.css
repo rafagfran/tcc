@@ -1,0 +1,27 @@
+.data td{
+    text-align: left;
+    vertical-align:middle;
+    font-weight: 300;
+    color: #fff;
+    padding: 3px 0;
+    border-bottom: solid 1px rgba(255,255,255,0.1);
+
+}
+
+.data{
+    display: flex;
+}
+
+.data #id{
+   text-align: center;
+    flex: 2;
+}
+
+.data #description{
+    flex: 15;
+}
+
+.data #status{
+    text-align: center;
+    flex: 3;
+}

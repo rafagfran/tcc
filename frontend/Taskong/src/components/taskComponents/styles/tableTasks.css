@@ -1,48 +1,122 @@
-.table {
-    margin-top: 10px;
-    display: grid; 
-    grid-template-columns: 50px 1fr 200px;
-    grid-template-rows: 40px;
-    grid-auto-rows: 40px;
-    padding: 10px;
+.table-tasks{
+    display: flex;
     flex: 1;
+    flex-direction: column;
+}
+
+/* --------------------------add new task--------------------------*/
+.new-task {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: none;
+    padding: 0 10px ;
     width: 100%;
 }
 
-.table input {
+.new-task .newTask-btn {
+    display: flex;
+    align-items: center;
     background: none;
-    color: white;
+    text-align: center;
+    height: 35px;
     border: none;
-    border-top: 2px solid rgba(247, 246, 246, 0.288);
-    box-shadow: none;
-    font-size: 1.1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    gap: 5px;
+    font-weight: 500;
 }
 
-.table input::placeholder {
-    color: #f7f7f742;
+.new-task .newTask-btn img {
+    height: 80%;
 }
 
-.table input:focus {
-    outline: none;
+.new-task .newTask-btn:hover {
+    transform: scale(103%);
 }
 
-.table #description-header {
-    grid-column: 2;
+.new-task input {
+    border: 1px solid white;
+    height: 30px;
+    width: 500px;
+    padding: 0 5px;
+    background: none;
 }
 
-.table #status-header {
-    grid-column: 3;
+body.theme-light .new-task input{
+    border: 1px solid black;
 }
 
-.table #task-id {
-    grid-column: 1;
-    margin-left: 10px; 
+body.theme-light .newTask-btn{
+    color: black;
 }
 
-.table #task-idescription {
-    grid-column: 2;
+
+/* ======================CUSTOM TABALE==================== */
+.table table{
+    table-layout: fixed;
+    width: 100%;  
 }
 
-.table #status-id {
-    grid-column: 3;
+.table th{
+  text-align: left;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
 }
+
+.table{
+    margin-top: 10px;
+    flex: 1;
+}
+
+.table .table-header{
+    padding-right: 15px;
+    border: 2px solid white;
+}
+
+.table .table-header #header{
+        display: flex;
+}
+
+.table .table-header #header #id{
+    text-align: center;
+    flex: 2;
+}
+
+.table .table-header #header #description{
+    flex: 15;
+}
+
+.table .table-header #header #status{
+    flex: 3;
+    text-align: center;
+
+}
+
+.table .table-data{
+    overflow-y: auto;
+    max-height: 100%;
+    text-align: left;
+    vertical-align:middle;
+    font-weight: 300;
+    color: #fff;
+}
+
+/* ------------ custom scrollbar ------------- */
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-track{
+    background: #bebdbd;
+}
+
+::-webkit-scrollbar-thumb{
+    background: rgb(104, 102, 102);
+    border-radius: 1px;
+    border: 1px solid black;
+}
+
+

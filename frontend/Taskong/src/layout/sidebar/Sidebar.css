@@ -237,3 +237,8 @@ body.theme-light .sidebar  .container hr{
 body.theme-light .sidebar .container .nav ul li a:hover{
     background-color: var(--light-sidebar-hover);
 }
+
+body.theme-light  .sidebar .container  .theme-selector p{
+    color: var(--light-sidebar-font);
+}
+
