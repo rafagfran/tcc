@@ -1,3 +1,4 @@
+
 .table-tasks{
     display: flex;
     flex: 1;
@@ -61,6 +62,7 @@ body.theme-light .newTask-btn{
 
 .table th{
   text-align: left;
+  font-size: 1.2rem;
   font-weight: 500;
   color: #fff;
   text-transform: uppercase;
@@ -69,11 +71,18 @@ body.theme-light .newTask-btn{
 .table{
     margin-top: 10px;
     flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .table .table-header{
     padding-right: 15px;
-    border: 2px solid white;
+    padding: 5px 20px;
+    border: 1px solid #342d9b8e;
+    background: #03002e;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
 }
 
 .table .table-header #header{
@@ -82,19 +91,19 @@ body.theme-light .newTask-btn{
 
 .table .table-header #header #id{
     text-align: center;
-    flex: 2;
+    flex: 1;
 }
 
 .table .table-header #header #description{
-    flex: 15;
+    margin-left: 20px;
+    flex: 20;
 }
 
 .table .table-header #header #status{
     flex: 3;
     text-align: center;
-
+    margin-right: 10px;
 }
-
 .table .table-data{
     overflow-y: auto;
     max-height: 100%;
@@ -102,21 +111,42 @@ body.theme-light .newTask-btn{
     vertical-align:middle;
     font-weight: 300;
     color: #fff;
+    padding: 0 20px;
+    flex: 1;
 }
-
 /* ------------ custom scrollbar ------------- */
 ::-webkit-scrollbar{
     width: 15px;
 }
 
 ::-webkit-scrollbar-track{
-    background: #bebdbd;
+    border-radius: 10px;
+    background: none
 }
 
 ::-webkit-scrollbar-thumb{
-    background: rgb(104, 102, 102);
-    border-radius: 1px;
-    border: 1px solid black;
+    background: linear-gradient(#2c2869,#242069,#201d5e, #211d5c,#201d5e,#242069,#2c2869);
+    /* background: #343b53; */
+    border-radius: 10px;
 }
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+    display: block;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+::-webkit-scrollbar-button:end:increment {
+    background-image: url('src/assets/scrollbar-button-up2.png');
+
+}
+ 
+::-webkit-scrollbar-button:start:decrement {
+    background-image: url('src/assets/scrollbar-button-dwn2.png'); 
+
+}
+
+
 
 
