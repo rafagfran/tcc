@@ -1,18 +1,20 @@
-import React, { useEffect, useState } from 'react'
-import './styles/tableTasks.css'
-import TableData from './tableData.jsx'
-import Axios from 'axios'
-import newTaskIcon from '../../assets/new-task-icon.png'
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import TableData from './TableData.jsx';
+import newTaskIcon from '../../assets/new-task-icon.png';
+import './styles/TableTasks.css';
 
-const tableTasks = () => {
+const TableTasks = () => {
   
   const [task, setTask] = useState([])
+  const [description, setDescription] = useState("")
+  const [status, setStatus] = useState("Pendente")
   
   useEffect(() => {
     const fetchData = async () => {
       try {
         // Faz uma solicitação HTTP GET para o servidor Node.js
-        const response = await Axios.get('http://localhost:3000/tasks');
+        const response = await axios.get('http://localhost:3000/tasks');
         // Atualiza o estado do componente com os dados recebidos
         setTask(response.data);
       } catch (error) {
@@ -22,30 +24,17 @@ const tableTasks = () => {
     fetchData()
   }, [])
 
-  const [description, setDescription] = useState("")
-  const [status, setStatus] = useState("Pendente")
-
-  // ------------------------------------------------------------------------------
-  // Quando acionado insere, espera 200ms e busca os dados -ALTERAR
-  // ------------------------------------------------------------------------------
   const handleNewTask = async () => {
-    Axios.post('http://localhost:3000/tasks', {description, status})
-      .then(() => {
-        setDescription("");
-        setTimeout(() => {
-          Axios.get('http://localhost:3000/tasks')
-            .then((response) => {
-              setTask(response.data)
-            })
-            .catch(error => {
-              console.error('Erro ao buscar dados:', error);
-            });
-        }, 200)
-      })
-      .catch(error => {
-        console.error('Erro ao inserir os dados:', error);
-      });
+    try{
+      await axios.post('http://localhost:3000/tasks', {description, status})
+      setDescription([])
+      const response = await axios.get('http://localhost:3000/tasks')
+      setTask(response.data)
+    }catch(error){
+      console.error('Erro ao inserir ou buscar os dados:', error);
+    }
   }
+
 // ------------------------------------------------------------------------------
   return (
     <section className="table-tasks">
@@ -82,4 +71,4 @@ const tableTasks = () => {
   )
 }
 
-export default tableTasks
+export default TableTasks

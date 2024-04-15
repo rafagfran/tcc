@@ -1,7 +1,7 @@
 import React from 'react'
 import './styles/TableData.css'
 
-const tableData = (props) => {
+const TableData = (props) => {
   return (
     <>
       <tr className='data'>
@@ -16,4 +16,4 @@ const tableData = (props) => {
   )
 }
 
-export default tableData
+export default TableData
