@@ -25,14 +25,27 @@ const TableTasks = () => {
   }, [])
 
   const handleNewTask = async () => {
+    var inputNewTask = document.getElementById('description-newTask')
+    var error = document.getElementById('description-null')
+
     try{
-      await axios.post('http://localhost:3000/tasks', {description, status})
-      // setTask(prevTask => [...prevTask, {description, status }]);
-      const response = await axios.get('http://localhost:3000/tasks');
-      // Atualiza o estado do componente com os dados recebidos
-      setTask(response.data);
-      setDescription('')
-      document.getElementById('description-newTask').value=''
+      if(description === ''){
+        console.log('description null')
+        inputNewTask.classList.add('null')
+        error.classList.add('show')
+      }else{
+        inputNewTask.classList.remove('null')
+        error.classList.remove('show')
+        await axios.post('http://localhost:3000/tasks', {description, status})
+        // setTask(prevTask => [...prevTask, {description, status }]);
+        const response = await axios.get('http://localhost:3000/tasks');
+        // Atualiza o estado do componente com os dados recebidos
+        setTask(response.data);
+        setDescription('')
+        inputNewTask.value=''
+        
+      }
+      
     }catch(error){
       console.error('Erro ao inserir ou buscar os dados:', error);
     }
@@ -46,6 +59,7 @@ const TableTasks = () => {
       <div className="new-task">
         <button className="newTask-btn" onClick={() => {handleNewTask()}}><img src={newTaskIcon} alt=""/>To add</button>
         <input id="description-newTask" type="text" placeholder='Description' onChange={(e) => setDescription(e.target.value)}/>
+        <span id='description-null'>description cannot be empty</span>
       </div>
       <div className="table">
         <div className="table-header">

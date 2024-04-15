@@ -52,6 +52,20 @@
     background: none;
 }
 
+.new-task span{
+    font-size: .7rem;
+    color: rgb(194, 58, 58);
+    visibility: hidden;
+}
+.new-task span.show{
+    visibility: visible;
+}
+
+.new-task input.null{
+    border-color: red;
+}
+
+
 /* ======================CUSTOM TABALE==================== */
 .table table{
     table-layout: fixed;
@@ -179,3 +193,4 @@ body.theme-light ::-webkit-scrollbar-thumb{
     background: var(--light-scrolbar-thumb);
     border-radius: 10px;
 }
+
