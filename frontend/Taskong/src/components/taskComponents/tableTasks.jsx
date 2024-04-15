@@ -9,7 +9,7 @@ const TableTasks = () => {
   const [task, setTask] = useState([])
   const [description, setDescription] = useState("")
   const [status, setStatus] = useState("Pendente")
-  
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -27,13 +27,18 @@ const TableTasks = () => {
   const handleNewTask = async () => {
     try{
       await axios.post('http://localhost:3000/tasks', {description, status})
-      setDescription([])
-      const response = await axios.get('http://localhost:3000/tasks')
-      setTask(response.data)
+      // setTask(prevTask => [...prevTask, {description, status }]);
+      const response = await axios.get('http://localhost:3000/tasks');
+      // Atualiza o estado do componente com os dados recebidos
+      setTask(response.data);
+      setDescription('')
+      document.getElementById('description-newTask').value=''
     }catch(error){
       console.error('Erro ao inserir ou buscar os dados:', error);
     }
   }
+
+
 
 // ------------------------------------------------------------------------------
   return (
@@ -47,9 +52,11 @@ const TableTasks = () => {
           <table>
             <thead>
               <tr id='header'>
-                <th scope='col' id='id' >id</th>
-                <th scope='col' id='description'>description</th>
-                <th scope='col' id='status'>status</th>
+                <th scope='col' id='trash'></th>
+                <th scope='col' id='id' ><span>id</span></th>
+                <th scope='col' id='description'><span>description</span></th>
+                <th scope='col' id='status'><span>status</span></th>
+                <th scope='col'  id='concluded'></th>
               </tr>
             </thead>
           </table>
@@ -59,7 +66,7 @@ const TableTasks = () => {
             <tbody>
               {/* DATA */}
               {task.map((task) => (
-                <TableData key={task.id} id={task.id} description={task.description} status={task.status}/>
+                <TableData key={task.id} id={task.id} description={task.description} status={task.status} setTask={setTask}/>
               ))}
             </tbody> 
           </table>

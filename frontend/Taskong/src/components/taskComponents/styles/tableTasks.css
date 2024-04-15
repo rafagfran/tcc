@@ -2,7 +2,6 @@
 
 .table-tasks{
     display: flex;
-    flex: 1;
     flex-direction: column;
 }
 
@@ -56,10 +55,12 @@
 /* ======================CUSTOM TABALE==================== */
 .table table{
     table-layout: fixed;
-    width: 100%;  
+    width: 100%;
 }
 
+
 .table th{
+
   text-align: left;
   font-size: 1.2rem;
   font-weight: 500;
@@ -75,8 +76,6 @@
 }
 
 .table .table-header{
-    padding-right: 15px;
-    padding: 5px 20px;
     border: 1px solid var(--dark-header-border);
     background: var(--dark-header-background);
     margin-bottom: 10px;
@@ -84,28 +83,39 @@
 }
 
 .table .table-header #header{
-        display: flex;
+    display: flex;
+    padding-right: 15px;
+    gap: 10px;
+}
+
+.table .table-header #header #trash{
+    flex: .2;
+    padding: 0 2px;
 }
 
 .table .table-header #header #id{
     text-align: center;
-    flex: 1;
+    flex: .3;
+
 }
 
 .table .table-header #header #description{
-    margin-left: 20px;
-    flex: 20;
+    flex: 5;
 }
 
 .table .table-header #header #status{
-    flex: 3;
     text-align: center;
-    margin-right: 10px;
+    flex: .6;
+}
+
+
+.table .table-header #header #concluded{
+    flex: .8;
+    padding-left: 5px;
 }
 
 .table .table-data{
     overflow-y: auto;
-    padding: 0 20px;
     flex: 1;
 }
 /* ------------ custom scrollbar ------------- */

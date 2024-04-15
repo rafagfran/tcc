@@ -1,48 +1,102 @@
-@import '../../../palette/Colors.css';
-
-
-.data td{
-    text-align: left;
-    vertical-align:middle;
-    font-weight: 400;
-    color: var(--dark-content-font);
-    padding: 3px 0;
-   margin-bottom: 10px;
+.data {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 50px;
+    gap: 10px;
 }
 
-.data{
-    gap: 20px;
+.data td{
     display: flex;
+    align-items: center;
+}
 
+.data #trash{
+    justify-content: center;
+    flex: 0.2;
+    cursor: pointer;
+    padding: 0 2px;
+}
+
+.data #trash img{
+    background: rgba(255, 0, 0, 0.205);
+    border-radius: 50%;
+    padding: 3px;
+    width: 25px;
+    height: auto;
+    transition: .1s;
 }
 
 .data #id{
+    flex: 0.3;
+    justify-content: center;
+}
+
+.data #id span{
+    border-radius: 20px;
     text-align: center;
-    flex: 1;
-    background: var(--dark-id-background);
-    border-radius: 10px;
+    background-color: rgb(72, 44, 138);
+    width: 100%;
+    max-width: 50px;
 }
 
 .data #description{
-    flex: 20;
-    padding-left: 10px;
-    border-bottom: solid 1px var(--dark-content-border); 
+    flex: 5;
+}
+
+.data #description span{
+    border-bottom: 1px solid var(--dark-content-border);
+    width: 100%;
 }
 
 .data #status{
-    background: var(--dark-status-background);
-    border-radius: 15px;
-    text-align: center;
-    flex: 3;
+    flex: .6;
+    justify-content: center;
 }
+
+.data #status span{
+    text-align: center;
+    width: 100%;
+    background: rgb(136, 23, 23);
+    padding: 0 3px;
+    border-radius: 20px;
+}
+
+.data #concluded{
+    flex: .8;
+    padding-left: 5px;
+    
+}
+
+.data #concluded span{
+    font-size: .9rem;
+    color: rgba(26, 124, 26, 0.685);
+    transition: .1s;
+    cursor: pointer;
+}
+
+
+
+/* HOVERS */
+
+.data #trash img:hover{
+    transform: scale(110%);
+    background: #c41111c0;
+}
+
+.data #concluded span:hover {
+    transform: scale(102%);
+    color: rgba(28, 204, 28, 0.781);
+}
+
+
 
 /* ----------LIGHT THEME------------ */
 
-body.theme-light .data td{
+body.theme-light .data td span{
     color: var(--light-content-font);
 }
 
-body.theme-light .data #id{
+body.theme-light .data #id span{
     background: var(--light-id-background);
 }
 
@@ -50,7 +104,7 @@ body.theme-light .data #description{
     border-bottom: solid 1px var(--light-content-border); 
 }
 
-body.theme-light .data #status{
+body.theme-light .data #status span{
     background: var(--light-status-background)
     ;
 }
